@@ -4,7 +4,7 @@ services:
     build: es
     volumes:
       # - es-data:/usr/share/elasticsearch/data
-      - /Users/snakamura/app/my_docker/elastic/es/config:/usr/share/elasticsearch/config
+      - /Users/shinichirounakamura/project/my_docker/elastic/es/config:/usr/share/elasticsearch/config
     ports:
       - 9200:9200
     expose:

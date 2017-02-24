@@ -1,0 +1,11 @@
+network.host: 0.0.0.0
+# ESでは同じネットワーク内の同じクラスタ名を持つnodeでクラスタを形成する
+cluster.name: rmp-advent-es
+
+# nodeを区別するため名前をつけますが、動的に生成したいので環境変数で設定しましょう。
+# コンテナを起動する際に環境変数からNODE_NAME=hogeで渡してあげます
+node.name: ${NODE_NAME}
+
+# mac環境でdockerを動かす際、virtualboxで仮想マシンを起動し、その環境でコンテナを立てる
+# Elasticsearchのクラスタはzen discoveryを使ってnodeを探すので、仮想マシンhostのipを明示的に渡す。
+discovery.zen.ping.unicast.hosts: ["192.168.99.100"]

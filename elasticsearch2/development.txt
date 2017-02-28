@@ -1,0 +1,3 @@
+build:  docker build -t elasticsearch/ver2 .
+起動: docker run -d -p 9200:9200 --name elasticsearch2 elasticsearch/ver2
+

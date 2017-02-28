@@ -8,3 +8,5 @@ RUN elasticsearch-plugin  install --batch x-pack
 
 # kuromojiをインストール
 RUN elasticsearch-plugin  install analysis-kuromoji
+# ICUをインストール
+RUN elasticsearch-plugin  install analysis-icu

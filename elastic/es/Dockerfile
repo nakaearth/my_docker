@@ -1,5 +1,8 @@
 FROM elasticsearch:5.1
 
+ADD config/elasticsearch.yml /usr/share/elasticsearch/config/
+ADD config/log4j2.properties /usr/share/elasticsearch/config/
+
 # x-pack をインストール
 RUN elasticsearch-plugin  install --batch x-pack
 

@@ -1,1 +1,1 @@
-elasticsearch.url: http://localhost:9200
+elasticsearch.url: http://elasticsearch:9200

@@ -9,11 +9,11 @@ es = Elasticsearch('http://localhost:9200')
 
 def generate_doc(row):
     doc = {
-        'start_value': row['始値'],
-        'end_value': row['終値'],
-        'low_value': row['安値'],
-        'high_value': row['高値'],
-        'timestamp': dt.strptime(row['データ日付'], '%Y/%m/%d')
+        'start_value': row['start_value'],
+        'end_value': row['end_value'],
+        'low_value': row['low_value'],
+        'high_value': row['high_value'],
+        'timestamp': dt.strptime(row['date_day'], '%Y/%m/%d')
     }
     return doc
 

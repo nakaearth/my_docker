@@ -6,7 +6,7 @@ services:
     container_name: elasticsearch
     environment:
       - "http.host=0.0.0.0"
-      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - "xpack.security.enabled=false"
       - "bootstrap.memory_lock=true"
     ports:

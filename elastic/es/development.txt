@@ -1,3 +1,9 @@
-build:  docker build -t elasticsearch6.5.0 .
-初回起動: docker run -d -p 9200:9200 --name elasticsearch6.5.0 elasticsearch6.5.0
-起動：    docker start elasticsearch6.5.0
+- build:  docker build -t elasticsearch6.5.4 .
+- build:  docker build --target ES6 -t elasticsearch6.5.4 .
+- 初回起動: docker run -d -p 9200:9200 --name elasticsearch6.5.4 elasticsearch6.5.4
+- 起動：    docker start elasticsearch6.5.4
+
+- コンテナ一括の削除
+docker rm `docker ps -a -q`
+
+
